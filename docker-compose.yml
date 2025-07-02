@@ -1,0 +1,10 @@
+services:
+  # Define o serviço da sua aplicação FastAPI
+  api:
+    build: .
+    container_name: api
+    ports:
+      - "8000:8000"
+    volumes:
+      # Mapeia o código local para o container, permitindo live-reload
+      - .:/app
